@@ -19,9 +19,6 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          React Native Piano!
-        </Text>
         <Staff height={height * 0.6} width={width * 0.8} both />
       </View>
     );
