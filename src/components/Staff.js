@@ -9,7 +9,7 @@ class Staff extends Component {
       // space in between treble and clef should take up around
       // 50% of the total height
       let cleffHeight = height / 4
-      notes = ['C', 'E', 'G']
+      notes = ['c', 'e', 'g', 'b']
       return (
         <View
           style={{height, width, display: 'flex', flexDirection: 'column'}}

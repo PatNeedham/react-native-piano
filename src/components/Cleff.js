@@ -11,10 +11,10 @@ class Cleff extends Component {
       return (
         <View style={{position: 'absolute', left: (imageWidth + 30), width: width - (imageWidth + 30), top: 0, bottom: 0, height, display: 'flex', flexDirection: 'row'}}>
           {
-            notes.map((note, index) =>
-              <View key={`_${index}_${note}`}
+            notes.map((key, index) =>
+              <View key={`_${index}_${key}`}
                 style={{flex: 1 / notes.length}}>
-                <Note height={height} width={40} />
+                <Note height={height} width={40} note={key} />
               </View>
             )
           }
