@@ -5,19 +5,21 @@ const trebleImg = require('../images/219px-GClef.svg.png')
 const bassImg = require('../images/FClef.svg.png')
 
 class Cleff extends Component {
+  renderNote = (key, index) => {
+    const {notes, height, width} = this.props
+    return (
+      <View key={`_${index}_${key}`}
+        style={{flex: 1 / notes.length}}>
+        <Note height={height} width={40} note={key} />
+      </View>
+    )
+  }
   renderNotes = (imageWidth) => {
     const {notes, height, width} = this.props
     if (notes) {
       return (
         <View style={{position: 'absolute', left: (imageWidth + 30), width: width - (imageWidth + 30), top: 0, bottom: 0, height, display: 'flex', flexDirection: 'row'}}>
-          {
-            notes.map((key, index) =>
-              <View key={`_${index}_${key}`}
-                style={{flex: 1 / notes.length}}>
-                <Note height={height} width={40} note={key} />
-              </View>
-            )
-          }
+          {notes.map(this.renderNote)}
         </View>
       )
     }
