@@ -10,7 +10,7 @@ function getHeightOffset(note) {
     return 0
   } else {
     let index = keys.indexOf(note)
-    return (-30 + (index * 5))
+    return (-30 + (index * 13))
   }
 }
 
