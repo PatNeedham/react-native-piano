@@ -36,7 +36,8 @@ class Note extends Component {
       >
         <View
           style={{width, height: 20, borderRadius: 7, backgroundColor}}
-          // transform={[{ skewX: '45deg' }]}
+          // transform={[{ skewX: '10deg' }, {rotateX: '45deg'}]}
+          transform={[{ rotate: '-30deg'}]}
         />
       </TouchableHighlight>
     )
